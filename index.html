@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Convict Journey</title>
+		<link rel="stylesheet" href="css/slider.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Domine|Ruslan+Display|Teko|Parisienne" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Charmonman:400,700|Dosis:300,400" rel="stylesheet"> <!--Merge these two font calls-->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap-slider.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="start-screen">
+			<h1 id='title'>Convict Journey</h1>
+			<h2>Click anywhere to continue</h2>
+		</div>
+		<main id="page-australia">
+			<div id="clock"></div>		
+			
+			<div id="timeline">
+				<div id="timeline-container">
+					<input id="time" class="slider" type="slider" data-slider-ticks="[1,2,3,4,5]" ticks_positions="[1, 2, 3, 4, 5]" 
+					data-slider-ticks-labels='["Level 1", "Level 2", "Level 3", "Level 4", "Level 5"]' data-slider-ticks-snap-bounds="1" data-slider-min="1" 
+					data-slider-max="4" data-slider-step="1" data-slider-value="1" data-slider-orientation="vertical" data-slider-tooltip="hide"/></div>
+				</div>
+			</div>
+			<div id="levels">
+				<div id="levels-container">
+				</div>
+				<div id="level-indicator">
+				</div>
+				<div id="level-labels">
+					<div id="level1" class="level-label">Level 1</div>
+					<div id="level2" class="level-label">Level 2</div>
+					<div id="level3" class="level-label">Level 3</div>
+					<div id="level4" class="level-label">Level 4</div>
+					<div id="level5" class="level-label">Level 5</div>
+					<div id="finish" class="level-label">Finish</div>
+				</div>
+			</div>
+			<section id="australia-map-container">
+				<div id="australia-map">
+					<img src="Images/australia-filled.svg">
+					<ul>
+						<li class="map-dot" id="moreton-bay"></li>
+						<li class="map-dot" id="sydney-cove">
+							<span id="map-tooltip">This colony's population has increased!</span>
+						</li>
+						<li class="map-dot" id="swan-river-colony"></li>
+						<li class="map-dot" id="van-diemens-land"></li>
+					</ul>
+				</div>
+			</section>
+			<nav id="right-side-buttons">
+				<button class="right-side-button" id="convict-btn">
+					<img src="Images/head-outline.svg" alt="Convicts">
+					<div>Convicts</div>
+				</button>
+				<button class="right-side-button" id="ship-btn">
+					<img src="Images/ship-outline.svg" alt="Ships">
+					<div>Ships</div>
+				</button>
+			</nav>
+
+
+			<article id="ship-modal">
+				<span class="close">X</span>
+				<h2>Ships</h2><br>
+				<hr>
+				<nav id="ship-options">
+					<button class="ship-option" id="ship-1-btn">
+						<img src="Images/ship.svg" alt="Neptune">
+						<h3>Neptune</h3>
+					</button>
+					<button class="ship-option" id="ship-2-btn">
+						<img src="Images/Bark.svg" alt="John_Renwick">
+						<h3>John Renwick</h3>
+					</button>
+					<button class="ship-option" id="ship-3-btn">
+						<img src="Images/Brig.svg" alt="Friendship">
+						<h3>Friendship</h3>
+					</button>
+				</nav>
+			</article>
+			<article id="ship-info-modal">
+				<span class="close">X</span>
+				<h2>Ships</h2><br>
+				<hr>
+				<div id="ship-data">
+					<section class="ship-info" id="Neptune">
+						<h2>Neptune 1838</h2>
+						<hr class="ship-hr">
+						<div class="ship-body">
+							<div class="ship-facts">
+								<h3>Rig Type: S<br>
+									Location Built: Calcutta<br>
+									Year Built: 1814<br>
+									Size (Tonnes): 360<br>
+									Passengers: 200 men<br>
+									Voyage: 128 days<br>
+									Deaths: 3<br>
+									Captain Joseph Nagle<br>
+									Surgeon Superintendent Patrick Martyn R.N.<br>							
+								</h3>
+							</div>
+						
+							<div class="ship-details">
+								<p>The Neptune was built at Cheptow in 1836. This was her only voyage transporting convicts to Australia. She was the next convict ship to leave Ireland for New South Wales after the departure of the Sir Charles Forbes two weeks previously.<br><br>
+
+								An accident which had nearly been attended with fatal consequences occurred off the inner point of Mrs. Macquarie's Chair on Saturday afternoon. Mr. Mackay, of Darlinghurst, and Mr. Abercrombie, of the Glenmore Distillery, had been on board the ship Neptune, lying off Dawes' Battery, and were, at the time of the accident, returning to Mr. Mackay's residence, accompanied by Captain Nagle of the Neptune, in the ship's cutter, with four of the seamen.<br><br>
+								
+								<em>When off Mrs. Macquarie's Chair, at about 100 yards distance from the land, and in the act of tacking, a sudden gust of wind caught the sails and upset the cutter, and the whole of the people on board were precipitated into the water. Mr. Mackay, who is considerably advanced in years, and was at the time in a very indifferent state of health, made towards the shore, as did several of the younger and stronger of his companions. Before he could accomplish his object his strength failed him and he sank to the bottom, where he must have perished but for the prompt aid afforded him by Captain Nagle and two of the seamen who swam to his assistance and brought him safely, though senseless to shore. Mr. Abercrombie and two of the seamen saved themselves by clinging to the boat. - Sydney Gazette 16th January 1838</em></p><br>
+							</div>
+						</div>
+					</section>
+					<section  class="ship-info" id="John_Renwick">
+						<h2>John Renwick 1838</h2>
+						<hr class="ship-hr">
+						<div class="ship-body">
+							<div class="ship-facts">
+								<h3>Rig Type: Bark<br>
+									Location Built: Newcastle<br>								
+									Year Built: 1826<br>
+									Size (Tonnes): 403<br>
+									Passengers: 173 women<br>
+									Voyage: 116 days<br>
+									Deaths: 1<br>
+									Captain John Byron<br>
+									Surgeon Superintendent Andrew Smith R.N.<br>
+								</h3>
+							</div>
+							<div class="ship-details">
+								<p>The John Renwick arrived in Port Jackson on 27 August 1838.<br><br>
+
+									Parbury's Oriental Herald and Colonial Intelligencer in News from Sydney gave the following account of the John Renwickconvicts<br><br>
+									
+									The women convicts of the ship John Renwick, were said to be the most troublesome cargo ever imported, being almost in a state of mutiny. Lady Gipps had  been on board to attempt to pacify them. Was Miss Julia Newman, who went out in this vessel, the cause of  the turbulency?   <br><br>
+									
+									......however the Sydney Gazette dated 4th September reported that the prisoners of the John Renwick were orderly and clean when visited by Lady Gipps the previous Saturday.<br>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section class="ship-info" id="Friendship">
+						<h2>Friendship 1788</h2>
+						<hr class="ship-hr">
+						<div class="ship-body">
+							<div class="ship-facts">
+								<h3>Rig Type: Brig<br>							
+									Location Built: Scarborough<br>
+									Year Built: 1784<br>
+									Size (Tonnes): 276<br>
+									Passengers: 76 male, 21 female prisoners, 6 male and 7 female children of convicts<br>
+									Deaths: 2<br>
+									Master Francis Walton<br>
+									Assistant Surgeon Thomas Arndell<br>
+								</h3>
+							</div>
+							<div class="ship-details">
+								<p>
+									The Friendship was scuttled at Borneo on her way to Canton from Botany Bay. The crew joined the Alexander and returned to England in June 1789. .......<br><br>
+									
+									<em>July 1788 the transports Alexander Friendship Prince of Wales and Borrowdale sailed from Port Jackson under Lieutenant Shortland by way as it was intended of Endeavour Strait but as it turned out by the Pelew islands China Sea and Sunda straits Bad weather overtaking the vessels after leaving Sydney they became separated the Friendship only remaining in company with the Alexander In which latter was Lieutenant Shortland The Middleton reef and island New Georgia and Shortland of the Solomon islands the Treasury Four and Wallis islands were discovered Pellew islands were communicated with and the north east Coast of Borneo reached October 1 7th Here the crews of the vessels having been terribly reduced by scurvy the Friendship was sunk and the remnant of her ships company transferred to the Alexander Continuing to Batavia the Alexander arrived November 19th in an almost helpless state only one man besides the officers being able to work aloft A new crew was here embarked and at the Cape of Good Hope the Sirius Captain Hunter fallen in with who gave Lieutenant Shortland information that the missing transports Borrowdale and Prince of Wales had returned to England by the southern passage The Alexander arrived at the Isle of Wight May 28th 1789....... Memoirs of Hydrography</em><br>
+								</p>
+							</div>
+					</section>
+				</div>
+			<!-- reference:
+				https://www.tallshipsturku.fi/en/tall-ships-races-finland-2017/ships
+				http://www.hawkesbury.net.au/claimaconvict/shipDetails.php?shipId=143
+				https://www.jenwilletts.com/convict_ship_friendship_1788.htm
+			-->
+			</article>
+			<article id="convict-modal">
+				<span class="close">X</span>
+				<h2>Convicts</h2>
+				<hr>
+				<div id="convict-data">
+					<h3>Hover over the names of each convict to see more information.</h3>
+					<article id="convict_information">
+					</article>
+				</div>
+			</article>
+			
+			<aside class="events" id="smallpox">
+				<span class="event-close">X</span>
+				<h1>The Smallpox Epidemic</h1>
+				<hr>
+				<p>Smallpox has been one of humanity’s deadliest diseases, though it is now eradicated in the wild. Europeans, including the colonists who arrived in Sydney in 1788, had developed some resistance through earlier exposure to the disease. However the local Aboriginal people had not. There is still debate over how smallpox broke out in the Sydney area in 1789. Its impact on Aboriginal people across Australia was devastating.</p>
+				<img src="Images/smallpox.jpg" alt="Smallpox Outbreak">
+				<h3>Read More</h3>
+			</aside>
+			<aside class="events" id="castle-hill">
+				<span class="event-close">X</span>
+				<h1>The Castle Hill Rebellion</h1>
+				<hr>
+				<p>The Castle Hill Rebellion of 1804 was Australia’s first uprising. The rebellion was an attempt by a group of Irish convicts to overthrow British rule in New South Wales and return to Ireland where they could continue to fight for an Irish republic. Ending in disaster, the ill-fated rebellion resulted in the death of at least 39 convicts in both ‘Australia’s Battle of Vinegar Hill’ itself and ensuing martial law punishments.</p>
+				<img src="Images/castlehill.jpg" alt="Castle Hill Rebellion">
+				<h3>Read More</h3>
+			</aside>
+			<aside class="events" id="myall-creek">
+				<span class="event-close">X</span>
+				<h1>The Myall Creek Massacre</h1>
+				<hr>
+				<p>Early in the morning of 18 December 1838, seven men were publicly hanged at the Sydney Gaol. They were the first British subjects to be executed for massacring Aboriginal people. The Myall Creek massacre was neither the first nor last massacre of Aboriginal people in Australia but the NSW Supreme Court trials that followed set a judicial precedent. However, attitudes towards such massacres took longer to change.</p>
+				<img src="Images/myallcreek.jpg" alt="Myall Creek Massacre">
+				<h3>Read More</h3>
+			</aside>
+			<aside class="events" id="last-fleet">
+				<span class="event-close">X</span>
+				<h1>The Last Fleet</h1>
+				<hr>
+				<p>The Hougoumont, the last ship to take convicts from the UK to Australia, docked in Fremantle, Western Australia, on January 9, 1868 – 150 years ago. It brought an end to a process which deposited about 168,000 convicted prisoners in Australia after it began in 1788.</p>
+				<img src="Images/lastfleet.jpg" alt="The Last Fleet">
+				<h3>Read More</h3>
+			</aside>
+
+			<!--~~~~~~~~~~~ Location modals ~~~~~~~~~~~~~~-->
+			<article class="location-modal" id="moreton-bay-modal">
+					<span class="close">X</span>
+					<h2>Moreton Bay</h2>
+					<hr>
+					<h3>Current Convict Population: <span class="convict-pop">0</span></h3>
+					<div>
+						<img src="Images/moreton-bay.jpg" alt="A painting of Moreton Bay in 1868">
+						<!--src: https://www.abc.net.au/news/2018-06-01/south-brisbane-from-the-north-shore/9821224-->
+					Established in 1824 the penal settlement at Moreton Bay was a place of secondary punishment to house hardened criminals and recidivist prisoners.
+					The Moreton Bay penal settlement was closed in 1842 when the Moreton Bay area was opened to free settlement, with Brisbane Town as its centre. The colony of Queensland was separated from New South Wales in 1859.
+					</div>
+					<!--Src: http://blogs.slq.qld.gov.au/jol/2014/06/12/moreton-bay-penal-settlement-1824-to-1842/-->
+					<button class="close-btn">Close</button>
+			</article>
+			<article class="location-modal" id="sydney-cove-modal">
+					<span class="close">X</span>
+					<h2>Sydney Cove</h2>
+					<hr>
+					<h3>Current Convict Population: <span class="convict-pop">0</span></h3>
+					<div>
+						<img src="Images/sydney-cove.jpg" alt="A painting of Sydney Cove from the Rocks on the western side of the cove">
+						<!--src: https://sydneylivingmuseums.com.au/convict-sydney/convicts-colony-->
+					On 26 January 1788 the first Governor of NSW, Captain Arthur Phillip, and the First Fleet arrived in Port Jackson (Sydney Harbour) to establish a penal colony at Sydney Cove. 
+					Many of the original accounts from the First Fleet mention the numerous ‘natives’ encountered in Botany Bay and Port Jackson from the first days of their arrival. Aboriginal peoples had been living in Australia for at least 40,000 years. The sea and woodland resources of the Sydney region — from the coast to the Blue Mountains in the west — supported a dense population of Aboriginal clans.
+					In contrast, the British penal colony struggled in its first decades with lack of food — exacerbated by the failure of European farming practices on unfertile Australian soil — and a shortage of supplies.
+					</div>
+					<!--src: https://www2.sl.nsw.gov.au/archive/events/exhibitions/2012/macquarie/02_settlement/index.html-->
+					<button class="close-btn">Close</button>
+			</article>
+			<article class="location-modal" id="van-diemens-land-modal">
+					<span class="close">X</span>
+					<h2>Van Diemen's Land</h2>
+					<hr>
+					<h3>Current Convict Population: <span class="convict-pop">0</span></h3>
+					<div>
+						<img src="Images/van-diemens-land.jpg" alt="A painting of the a probation station in Van Diemen's Land."><!--http://www.utas.edu.au/library/companion_to_tasmanian_history/P/Probation%20system.htm-->
+					To early British settlers, Van Diemen's Land (as they called Tasmania) was the end of the world – an ideal location for some of their government's largest and most notorious penal colonies.
+					The first Tasmanian jail was built at Risdon Cove in 1803, but in 1804 the prisoners were moved to Sullivans Cove – soon to be known as Hobart.
+					After a decade or so, the Macquarie Harbour penal colony was established as a work house on Tasmania's west coast where convicts logged the Huon pine forests for ship building and furniture making. Renowned even among Britons at the time as a particularly harsh prison, it's remembered as the site of doomed escapes by convicts who drowned, starved or resorted to cannibalism in the surrounding bushland.
+					</div>
+					<!--Src: https://www.discovertasmania.com.au/about/articles/tasmanias-convict-history-->
+					<button class="close-btn">Close</button>
+			</article>
+			<article class="location-modal" id="swan-river-colony-modal">
+					<span class="close">X</span>
+					<h2>Swan River Colony</h2>
+					<hr>
+					<h3>Current Convict Population: <span class="convict-pop">0</span></h3>
+					<div>
+						<img src="Images/swan-river.PNG" alt="A painting of the swan river depicting early settlers and aborignals."><!--https://nla.gov.au/nla.obj-135289796-->
+					The Swan River Colony marked a new chapter in Britain’s colonisation of Australia. The two main colonies of New South Wales and Van Dieman’s Land had at first been populated primarily by convicts. The Swan River Colony, founded in 1829, was to be something different, a colony for free settlers.
+					During the first year of settlement the Swan River Colony struggled on a number of fronts. Initially too many people arrived too quickly, and then there were too few. Soon the population began to decline as disheartened settlers left for the eastern colonies.
+					In 1847 the York Agricultural Society, a group of wealthy pastoralists, petitioned the colony’s Legislative Council to consider the introduction of convict labour. They argued that convict labour would stimulate the economy and open up the state to farming and development. 
+					</div>
+					<!--src: http://fremantleprison.com.au/history-heritage/history/swan-river-colony-pre-1850/-->
+					<button class="close-btn">Close</button>
+			</article>
+
+
+			<!--Character Interactions-->
+			<button id="character-main-btn">
+					<img src="Images/convict-character-head.png" alt="Convict Character">
+			</button>
+			<section id="character-section" class="character-hide character-hidden">
+				<img src="Images/convict-character.png" alt="Convict Character" id="character-img">
+				
+				<section class="character-main character-main-hidden" id="0">
+					<span class="minimise"></span>
+					<section class="character-text">
+						This is some sample text. The text that the character will speak will go here. It will hopefully be interchangeable and not repeat this section a bunch of times in the html file.
+					</section>
+					<section class="character-choices">
+						<button>Option One</button>
+						<button>Option Two</button>
+						<button>Option Three</button>
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="1">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Ello there. Name’s Cyril Tullet. I’ve just been shipped thousands of miles from home against my will to a good-for-nothin’ land full of giant rabbits and a million things that want to kill me. And now, after months of rotting away in a ship’s hold, they expect me to work all day every day for nothing! So anyway, how’s your day going?
+					</section>
+					<section class="character-choices">
+						<button class="option1">Why were you transported here?</button>
+						<!--<button class="option2">What's it like living in the colony?</button>-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="2">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well, it’s a funny story really. You see I was in the pub with the rest o' the lads, just like every other Friday or pay day, as it was back then. Now, this particular night, I just 'appened to be drinking like a bloody fish, even ole' Tommy thought so and 'e practically lives in the bottle.
+					</section>
+					<section class="character-choices">
+						<button class="option1">...</button>
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="3">
+					<span class="minimise"></span>
+					<section class="character-text">
+						I don't know when my memory went, but the next thing I know, I'm waking up stark naked, lying in a pile of horse dung, with no clue who, what and when got me there. So, I get up and obviously, the first thing I wanna do is cover meself. I never claim to be the most attractive of men, but I will admit, the looks of disgust I was getting was enough to make even me, feel bad.
+					</section>
+					<section class="character-choices">
+						<button class="option1">...</button>
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="4">
+					<span class="minimise"></span>
+					<section class="character-text">
+						So I grab some clothes off the first clothesline I see, just as a pair of officers walk round the corner. Three minutes later, I'm being thrown in the clink, still without clothes and within the month, I'm off to this bloody god forsaken island, with nary a word to my poor family. I don't actually have a family of course, but that’s beside the points, it's just plain rude, like what if I had, you know?
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="5"> <!--MAJOR DECISION-->
+					<span class="minimise"></span>
+					<section class="character-text">
+						G'day stranger, it's been a few years. What do you think of G'day as a saying, does it sound good? I just came up with it. Sounds like something that could become iconic to Australia in say… 239 years. Anyway, I was told that I need to get rid of these jars full of… is it cream…? Looks like cream to me. Anyway, do you reckon I should do?
+					</section>
+					<section class="character-choices">
+						<button class="option1">Dump it in the river</button> <!--Population decreses but story on course-->
+						<button class="option2">Dispose of it away from the river</button>
+						<button class="option3">It would be a shame to waste good cream...</button><!--People lose trust in him and sydney pop decreases.-->
+				
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="6">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well… turns out it wasn't cream… it was this stuff called variolas matter… you know the, ummm, pus they put under kids skin to create smallpox resistance. Yeah… and that went in the towns drinking supply causing a bit of a smallpox outbreak… It only killed like… half the population. Luckily, no one knows who caused it… I dodged a bullet there… literally.
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="7">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well everyone here seems fine, no harm done hey. Apart from, what, 80% of the indigenous population being wiped out. Yeah, that wasn't cream… ever heard of variolas matter? Let's just say its… smallpox pus… ouch. No worries though, lesson learnt, I'm sure that's the last time us white settlers will hurt these poor people and their families… or me anyway, it's not really anyone else's fault.
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="8">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well turns out it wasn't cream, though it didn't do me any harm, tasted great in my morning 
+						slop. Can't say the same for the fifty odd blokes I shared it with. Apparently smallpox pus "kills people" and "tastes disgusting". Yeah I don’t have many friends left here at the moment. Eddie died of smallpox, Ted died of smallpox, Richie was mauled by a goat… real sad.
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="9">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Aaaaah, you again hey? It's been what, fifteen years? I haven't aged a day. Anyway, I've got another problem that I need you to help me with. You see, some other convicts want to start a rebellion and I 'appen to be doing quite well for myself, got meself a bit of a following. Anyway, they are willing to pay me a pretty penny for lending a hand.
+					</section>
+					<section class="character-choices">
+						<button class="option1">Might as well give it to them, what could go wrong after all?</button> <!--Goes to ID 11-->
+						<button class="option2">Pretend you will, but actually just sell them out to the guards</button> <!--Goes to ID 12-->
+						<button class="option3">Please, if you want something done, do it yourself. Start your own rebellion</button> <!--GOes to ID 13-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="10">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Oh, you’re back I see. How have the last 15 years been for you? Good? That's Good. Mine, not so much. I have no friends, no one I trust and oh….. Wow, ok, it also looks like I have found myself in the middle of a good old-fashioned revolt. I really don't want to have to decide what to do next. Can you tell me what to do?
+					</section>
+					<section class="character-choices">
+						<button class="option1">Fight brother, for FREEEEEEEEEEEDOOOOOOOM!!!!!</button> <!--GOes to id 14-->
+						<button class="option2">Better run for it and get the guards to come and put a stop to it</button> <!--Goes to ID 15-->
+						<button class="option3">Hideout until it blows over</button> <!--Goes to ID 16-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="11">
+					<span class="minimise"></span>
+					<section class="character-text">
+						They failed. Miserably. Never have I seen such a sorry lot after the guards were done with them. Half of them were killed and the other half transported to Van Diemen's land, where ever that is. They never figured out who helped them though, so that was lucky… Still, it was just bad for business, kinda wish I did it myself now.
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="12">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Ha. Hahahahaha. HAHAHAHAHAHAHAHAHAHAHAHA. What bloody idiots, am I right? Did they really think I would help with their pathetic excuse for a rebellion, risking my business in the process. The leaders were killed and the rest of the traitors hung. And how was I rewarded for my service to the country? With nothing, that's what, bloody nothing. That's the last time I help the guards….
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="13">
+					<span class="minimise"></span>
+					<section class="character-text">
+						On second thought, maybe riling up the convicts and starting a rebellion wasn't the greatest idea I've ever had. Especially since they crushed it pretty quickly and shipped me off to Van Diemen's land. All the power I gained, gone. It's almost like this one decision that you made for me has had more effect on my life than the thousands I have made for myself… weird don't you think? Anyway, it can't be any worse than here I suppose…
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="14">
+					<span class="minimise"></span>
+					<section class="character-text">
+						You know, I really should have waited before joining in like that. Within about a day the guards got wind of it and we were surrounded. We were forced to watch them hang our leaders in front of our very eyes. Horrible. Not that I knew them or anything but I have a weak stomach when it comes to that stuff… anyway, as punishment, we are being shipped off to Van Diemen’s Land. Can't be any worse than here I suppose.
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="15">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well, the damn fools were caught and I was praised for my brave efforts. That's all though, I'm just being praised. Nothing like helping someone out and having them turn around to spit in your face. Still, it could be worse, imagine what would have happened if I had joined them. They're all busy being hung and ""redistributed". I could have ended up in some Van Diemen's land. That’s like the backwater of backwaters down there. 
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="16">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well I came out after a week… and was instantly punished for being "late to mass on a Sunday". 50 lashings I got, all for missing some old drone on about a man who died for our sins. Imagine that, dying for the sake of other people. Crazy. Anyway, the revolt was crushed within a week so I'm glad I missed that. The traitors were either killed or sent to a place they call Van Diamonds land. Wherever that is. As for us convicts, life goes on as normal… huh, funny how nothing noteworthy happened to me. I feel like in an alternate dimension, something much more interesting would have happened….
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+<!-- SECTION 3.1 story-->
+
+				<section class="character-main character-main-hidden" id="69">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Ah…. Christ… I can't see a bloody thing…. I tell you, being bottom dog ain't fun. Do yah even know what bottom dog is? It's basically being in the pit beneath the tree while you and someone else are cutting it. One on top and below, that’s how we do it. God I hate forced labour and I hate lumberjacking. You get sawdust all in your eyes and ears… bloody painful is what it is. Wish I was top dog like Bill.
+					</section>
+					<section class="character-choices">
+						<button class="option1">*Eh Ehmm*</button>
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="17">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Oh, it's you again. And oh, who are those guys? Are they your… never mind, judging by, you know, the spears and stuff pointing at us, those Aborigines are not your friends… You know what, I reckon I'll leave what to do next, up to you.
+					</section>
+					<section class="character-choices">
+						<button class="option1">Stand and fight. What are spears to the full might of… your fists?</button> <!--RESULT ID18-->
+						<button class="option2">Surrender, it's the only way we are going to get through this alive.</button> <!--RESULT ID19-->
+						<button class="option3">Grab Bill and throw him at them. He will keep them busy long enough for you to escape.</button> <!--RESULT ID20-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="18">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well, I tried to fight, I really did. I acted real brave I did, ran straight at then, ready to give them the old one, two. Or I would have run at them if they didn't graze my leg with a spear first. Luckily, my quick wits judged the situation and I decided that if I faked bawling my eyes out, they might think me pathetic and not a threat, even though I so clearly am. It succeeded, although it followed with a great deal of laughter and taunting form them which really hurt emotionally… or it would of if the crying and screaming had been real of course. After the rest of the crew they killed a bunch of others… not a pretty sight. Who would have thought people would react this violently while we invade and steal their land.
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="19">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well it took a lot of acting, and I swear on my mother's grave, it was acting, an 'ard man like me could never weep so pathetically, they spared me, and allowed me to join their ranks. I think. I honestly haven't the foggiest at what they are saying, I've just been following them around and they haven't killed me yet. I was the only one they didn't kill in fact. It must have been my fine acting that saved me. Anyway, seems I'll be staying with them for a while.
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="20">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Phew, that was easy. Bill was obliterated completely, but then he lived a good, fulfilling life probably, being top-dog after all, while I was stuck as bottom dog, and I could never be top dog because I was 'incompetent' and 'a waste of air'… I'm not saying he deserved it but… he deserved it. Anyway, I managed to get back to camp in time to warn them and the guards routed them out before they could do too much more damage to the colony. Honestly though, what an unprovoked attack, what have we ever done to them apart from stealing their land and treating them like animals.
+					</section>
+				</section>
+<!--Section 3.2 story-->
+				<section class="character-main character-main-hidden" id="21">
+					<span class="minimise"></span>
+					<section class="character-text">
+							Ah, it's you again. You know, you do seem to 'ave a way of appearin' just as I 'appen across potentially life-changing decisions. Anyway, I just overheard a few blokes talking, and it sounds like they're scheming to murder some Aboriginals. Now, I 'avent got a problem with these natives, contrary to what everyone says, and I don't see why they have to die. But then, whose gonna listen to me? Anyway, what should I do?
+					</section>
+					<section class="character-choices">
+						<button class="option1">There is nothing you can do, best not to get involved and keep yourself safe.</button> <!--ID22-->
+						<button class="option2">Better tell the guards, I'm sure they won't let innocent people die.</button> <!--ID23-->
+						<button class="option3">The guards won't listen, you've got to go warn these people yourself.</button> <!--ID24-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="22">
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, they got off, scot-free. Slaughtered an entire village and not so much a slap as punishment. Says something about the world we live in right, if people can do that. A fat lot of good I was though, sitting by while innocent people die and pretending that I had nothing to do with it. Anyway, best I get back to doing the only thing I'm good at… building bloody railroads.
+						</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="23">
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well I told them, but they didn't do anything to stop, that’s for sure. They just waited for 'em to get back, charged 'em with escaping and hung 'em. Instead of preventing death, they just caused more. Goes to show what they care about aye. At least those poor people got some retribution though right? Not that it will do them any good. Looks like I'm destined to rot in this cell for the rest of eternity then, good for nothing but building railways. What fun…
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="24">
+					<span class="minimise"></span>
+					<section class="character-text">
+							Right, it was a good choice, morally correct I would say. There was one small problem of course, which was that they don't speak English. I just waved my arms around for a bit, realised it wasn't working, then sat down and gave up. Luckily though, I put them on alert, so when those scum came out of the bushes ten minutes later, all guns blazing, they were filled with spears till they were as prickly hedgehogs. I threw like one rock at them, to show these people that I was on their side, and I think they believe me. They 'aven't killed me yet. Oh, and I just realised, I escaped. That was easier than I thought it would be. They really don't keep too close an eye on us convicts do they. Freedom, here I come.
+						</section>
+					<section class="character-choices">
+					</section>
+				</section>
+<!--Section 4.1-->
+				<section class="character-main character-main-hidden" id="25">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Ah, it's you again. Finally, I've been waiting a bloody age for you to appear again, it's awfully boring in this 'ere camp. Funny saying that actually, does it seem a bit weird that I've been 'ere for a good 60 years for stealing some clothes. A bit harsh really, says somethin' about the British penal system. And I haven't aged a day… but no time to dwell on that. There 'ave been rumours you see, about gold being found around Bendigo in this new place they call Victoria. Now, I'm not saying we should go get rich…. No, never mind, that is exactly what I'm saying. We are gonna have to escape first though. How should we do it?
+					</section>
+					<section class="character-choices">
+						<button class="option1">Steal the keys from the guards and slip out during the night.</button> <!--ID22-->
+						<button class="option2">Fake an illness and be taken to the weak doctor, overpower him and flee.</button> <!--ID23-->
+						<button class="option3">Wait for the days work to begin and go out into the woods  for a "toilet break".</button> <!--ID24-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="80">
+					<span class="minimise"></span>
+					<section class="character-text">
+						Ah, it's you again. Finally, I've been waiting a bloody age for you to appear again, it's awfully boring in this 'ere camp. Funny saying that actually, does it seem a bit weird that I've been 'ere for a good 60 years for stealing some clothes. A bit harsh really, says somethin' about the British penal system. And I haven't aged a day… but no time to dwell on that. There 'ave been rumours you see, about gold being found around Fingal in Van Diemen's land. Now, I'm not saying we should go get rich…. No, never mind, that is exactly what I'm saying. We are gonna have to escape first though. How should we do it?
+					</section>
+					<section class="character-choices">
+						<button class="option1">Steal the keys from the guards and slip out during the night.</button> <!--ID22-->
+						<button class="option2">Fake an illness and be taken to the weak doctor, overpower him and flee.</button> <!--ID23-->
+						<button class="option3">Wait for the days work to begin and go out into the woods  for a "toilet break".</button> <!--ID24-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="26"> <!--Goes to ending 1-->
+					<span class="minimise"></span>
+					<section class="character-text">
+						Well I managed to successfully steal the keys, using my stunning guile. I went to grab them and purposely tripped, grabbing the officers keys and his breeches with them. They…. Phew, they lashed me for that one. Luckily they didn't realise the keys were missing though. Anyway, that night I managed to get out the door, but some of the other convicts were still awake and threatened to call the guards if I didn't let them out as well… long story short, I ended up releasing half the prisoners before I could get away. Still, I'm out now. Time to go find myself some gold.
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="27"> <!--Goes to ending 2-->
+					<span class="minimise"></span>
+					<section class="character-text">
+						Ok, first things first, the doctor was not weak, that was a gross misconception of the strength of that particular academic. Since I attacked 'im, I'm being sent over to Swan River colony. Sounds like a great place though. One officer told me that he was jealous that he couldn't spend the rest of his days in the middle of a desert, surrounded by nothing but salt and sand… Wait a second….
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="28"> <!--Goes to ending 3-->
+					<span class="minimise"></span>
+					<section class="character-text">
+						I DID IT. I ESCAPED. I'M FINALLY FREE, AFTER 60 YEARS. Aaaah, freedom tastes so good, I just want to kiss everything, the ground, the trees, these little furry pla- OOOOOOOOOOOOW. Bloody stinging nettles. Still, I guess even freedom comes with a price. They didn't even suspect me, I just legged it as soon as I was out of sight. Thank god I'll never be seeing them again. Now anyway, where am I. This place doesn't look too familiar. Does the sun always set in the north or the south? I think it's the north, I best just follow it. I should find someone eventually….
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+<!--Section 4.2 story-->
+				<section class="character-main character-main-hidden" id="29"> 
+					<span class="minimise"></span>
+					<section class="character-text">
+							Oh it's you again. You know, it's lovely out here, living with the tribes people. So peaceful, so simple so -oh I forgot, no one here speaks English, look mate, you have got to get me out of here. They are nice enough people, but for the love Christ, I need myself some grog. Not to mention, I found this. A nugget of solid gold, in a river a few days back. I bet it's worth a fortune, if only I can make my way back to civilisation. The only question is, which way should I go? I've learnt my directions since I've been out here, though I've lost track of where I am. Which way should I go to get to civilisation?
+					</section>
+					<section class="character-choices">
+						<button class="option1">North - It's much too cold down here, out in the open. Better head north-east to a warmer climate AND the coast.</button> <!--if TAS ID30, else ID31-->
+						<button class="option2">East - directly towards the coast. After all, you can't have strayed too far from civilisation.</button> <!--ID32-->
+						<button class="option3">South  - There is quite a big city down south isn't there, on the coast? What better place to find other settlers.</button> <!--if TAS ID33, else ID34-->
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="30"> <!--Goes to ending 1-->
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, it appears that north was an excellent idea. I'm loaded I am, absolutely rolling in gold since I found this town called Launceston.  People are even willing to pay me, for the information on where I found the gold, before they go off hunting for it themselves. I don't even know where it was, either. Bloody fools. Yep, things are finally looking up for old Cyril.
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="31"> <!--Goes to ending 2-->
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, uhhh… heading north wasn't too good of an idea. You see, I found my way back to Sydney, which has grown into quite the city by the way, so I thought I would have absolutely no trouble fitting in. However…. Somehow, after 20 years, old Eddie the Teddie guard, walked past me and recognised me and don't let that name fool you. That man is like a rock, nothing cuddly about 'im. I was chucked back in the clink faster than I could blink. Next thing I know, I'm on the next boat to Swan River, some new colony in the west. Still, as long as the grog keeps flowing, I'm 'appy. Unless… god forbid them from not having a tavern in this brand new colony…
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="32"> <!--Goes to ending 3-->
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well… this is bad… very bad. You know, if you ever want some useful advice, let me tell you this. If you ever come across a random group of strangers, do not openly ask them where the nearest town is or tell them that you have pockets full of gold. I'm just saying, because, when that happened to me, they stole the gold, tied me up and left me out in the bush to die. I guess that I should 'ave expected that in a country full of convicts but… I'm just a trusting soul. Still, they gave me quite a hard hit on the head. Where does the sun rise again? Was it the north or the east…
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="33"> <!--Goes to ending 2-->
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, uhhh… heading south wasn't too good of an idea. You see, I found my way back to Port Arthur, which has grown into quite the city by the way, so I thought I would have absolutely no trouble fitting in. However…. Somehow, after 20 years, old Eddie the Teddie guard, walked past me and recognised me and don't let that name fool you. That man is like a rock, nothing cuddly about 'im. I was chucked back in the clink faster than I could blink. Next thing I know, I'm on the next boat to Swan River, some new colony in the west, faster than I could think. Still, as long as the grog keeps flowing, I'm 'appy. Unless… god forbid them from not having a tavern in this brand new colony…
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="34"> <!--Goes to ending 1-->
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, it appears that south was an excellent idea. I'm loaded I am, absolutely rolling in gold since I found this town called Launceston.  People are even willing to pay me, for the information on where I found the gold, before they go off hunting for it themselves. I don't even know where it was, either. Bloody fools. Yep, things are finally looking up for old Cyril.
+					</section>
+					<section class="character-choices">
+					</section>
+				</section>
+<!--ENDINGS-->		
+				
+				<section class="character-main character-main-hidden" id="35">
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, it looks like this adventure is over. You took me in and changed my life from that of a poor, 'elpless convict, to a rich man. However, this is the end of an era, and the last ever ship to carry convicts has just docked in at Swan River. How do I know this you may ask… I don't know, but it sounds accurate. Looking back, I may not have made the greatest decisions, some of which may have resulted in the deaths of thousands and the release of hundreds of criminals into the general population. But it has been a good life, it has. A long one as well. Really long actually…. It's almost like I hit the age of 25 and just stopped aging. It's almost like I'm a figment of your imagination….
+					</section>
+					<section class="character-choices">
+						<button class="end-option">Goodbye Cyril</button>
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="36">
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, it looks like this adventure is over. You took me in and changed my life from that of a poor, 'elpless convict, to a… poor and 'elpless convict. To be 'onest, you 'aven't really changed anything, but you 'ave been a good friend. However this is the end of an era, and the last ever ship to carry convicts has just docked in at Swan River. Looking back, I may not have made the greatest decisions, some of which may have resulted in the deaths of thousands. But it has been a good life, it has. A long one as well. Really long actually…. It's almost like I hit the age of 25 and just stopped aging. It's almost like I'm a figment of your imagination….
+					</section>
+					<section class="character-choices">
+						<button class="end-option">Goodbye Cyril</button>
+					</section>
+				</section>
+
+				<section class="character-main character-main-hidden" id="37">
+					<span class="minimise"></span>
+					<section class="character-text">
+							Well, it looks like this adventure is over. You took me in and changed my life from that of a poor, 'elpless convict, to a... lost, poor and 'elpless convict. Yeah, you 'aven't done much mate, in fact, I'm probably worse off for meeting yah. I've been wandering around the bush for, I don't know how long and I 'aven't met a soul. However this is the end of an era, and the last ever ship to carry convicts has just docked in at Swan River. How do I know this you may ask, considering I 'aven't seen civilisation for years… I don't know, but it sounds accurate. Looking back, I may not have made the greatest decisions, some of which may have resulted in the deaths of thousands. But it has been a good life, it has. A long one as well. Really long actually…. It's almost like I hit the age of 25 and just stopped aging. It's almost like I'm a figment of your imagination….
+					</section>
+					<section class="character-choices">
+						<button class="end-option">Goodbye Cyril</button>
+					</section>
+				</section>
+
+			</section>
+
+			<button id="timeline-forward" class="timeline-forward">
+				<img src="Images/fast-forward.png" alt="Next">
+				<div>Next</div>				
+			</button>
+
+			<section id="end-modal">
+				<p>Thanks for playing Convict Journey! We hope you had fun.</p>
+				<p>Want to try for a different ending?</p>
+				<button id="restart-btn">Restart</button>
+			</section>
+
+		</main>
+	</body>
+</html>
